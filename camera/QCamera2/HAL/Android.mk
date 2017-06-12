@@ -9,21 +9,20 @@ LOCAL_CLANG_CFLAGS += \
         -Wno-error=format
 
 LOCAL_SRC_FILES := \
-        QCamera2Factory.cpp \
-        QCamera2Hal.cpp \
-        QCamera2HWI.cpp \
-        QCameraMem.cpp \
-        ../util/QCameraQueue.cpp \
-        ../util/QCameraCmdThread.cpp \
-        QCameraStateMachine.cpp \
-        QCameraChannel.cpp \
-        QCameraStream.cpp \
-        QCameraPostProc.cpp \
-        QCamera2HWICallbacks.cpp \
-        QCameraParameters.cpp \
-        CameraParameters.cpp \
-        QCameraThermalAdapter.cpp \
-        wrapper/QualcommCamera.cpp
+    QCamera2Factory.cpp \
+    QCamera2Hal.cpp \
+    QCamera2HWI.cpp \
+    QCameraMem.cpp \
+    ../util/QCameraQueue.cpp \
+    ../util/QCameraCmdThread.cpp \
+    QCameraStateMachine.cpp \
+    QCameraChannel.cpp \
+    QCameraStream.cpp \
+    QCameraPostProc.cpp \
+    QCamera2HWICallbacks.cpp \
+    QCameraParameters.cpp \
+    QCameraThermalAdapter.cpp \
+    wrapper/QualcommCamera.cpp
 
 LOCAL_CFLAGS = -Wall -Wextra -Werror
 
