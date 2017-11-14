@@ -55,7 +55,6 @@ LOCAL_SRC_FILES := $(MM_CAM_FILES)
 
 LOCAL_MODULE           := libmmcamera_interface
 LOCAL_32_BIT_ONLY := true
-LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := libdl libcutils liblog libutils libhardware
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true

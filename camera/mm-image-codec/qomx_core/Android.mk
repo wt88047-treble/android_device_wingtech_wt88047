@@ -22,7 +22,6 @@ LOCAL_SRC_FILES := qomx_core.c
 
 LOCAL_MODULE           := libqomx_core
 LOCAL_32_BIT_ONLY := true
-LOCAL_PRELINK_MODULE   := false
 LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libutils
 LOCAL_VENDOR_MODULE := true
 
