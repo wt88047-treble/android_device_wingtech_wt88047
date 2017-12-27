@@ -74,7 +74,7 @@ wifi.interface=wlan0
 
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.frp.pst=/dev/block/bootdevice/by-name/config
+ro.frp.pst=/dev/block/platform/soc.0/7824900.sdhci/by-name/config
 
 # SYS
 PRODUCT_PROPERTY_OVERRIDES += \
