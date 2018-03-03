@@ -131,6 +131,12 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
 
+# Enfore RRO Target
+PRODUCT_ENFORCE_RRO_TARGETS := \
+    Settings \
+    SettingsProvider \
+    framework-res
+
 # Filesystem
 PRODUCT_PACKAGES += \
     fs_config_files
