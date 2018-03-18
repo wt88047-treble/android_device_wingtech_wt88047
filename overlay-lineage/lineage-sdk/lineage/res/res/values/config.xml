@@ -99,4 +99,7 @@
         <item>02cool:dynamic</item>
         <item>37sRGB-native:srgb</item>
     </string-array>
+ 
+    <!-- Should we filter any display modes which are unmapped? -->
+    <bool name="config_filterDisplayModes">true</bool>
 </resources>
