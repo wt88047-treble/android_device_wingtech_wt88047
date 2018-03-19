@@ -2,11 +2,11 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_CLANG_CFLAGS += \
-        -Wno-error=unused-private-field \
-        -Wno-error=strlcpy-strlcat-size \
-        -Wno-error=gnu-designator \
-        -Wno-error=unused-variable \
-        -Wno-error=format
+    -Wno-error=unused-private-field \
+    -Wno-error=strlcpy-strlcat-size \
+    -Wno-error=gnu-designator \
+    -Wno-error=unused-variable \
+    -Wno-error=format
 
 LOCAL_SRC_FILES := \
     QCamera2Factory.cpp \
@@ -24,7 +24,7 @@ LOCAL_SRC_FILES := \
     QCameraThermalAdapter.cpp \
     wrapper/QualcommCamera.cpp
 
-LOCAL_CFLAGS = -Wall -Wextra -Werror
+LOCAL_CFLAGS += -Wall -Wextra -Werror
 
 #use media extension
 #ifeq ($(TARGET_USES_MEDIA_EXTENSIONS), true)
@@ -37,21 +37,22 @@ LOCAL_CFLAGS += -DUSE_MEDIA_EXTENSIONS
 LOCAL_CFLAGS += -DDEFAULT_DENOISE_MODE_ON
 
 LOCAL_C_INCLUDES := \
-        $(LOCAL_PATH)/../stack/common \
-        frameworks/native/include \
-        frameworks/native/include/media/openmax \
-        frameworks/native/libs/nativebase/include \
-        frameworks/native/libs/nativewindow/include \
-        frameworks/native/libs/arect/include \
-        $(call project-path-for,qcom-display)/libgralloc \
-        $(call project-path-for,qcom-display)/libqdutils \
-        $(call project-path-for,qcom-media)/libstagefrighthw \
-        system/media/camera/include \
-        $(LOCAL_PATH)/../../mm-image-codec/qexif \
-        $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
-        $(LOCAL_PATH)/../util \
-        $(LOCAL_PATH)/wrapper \
-        system/media/camera/include
+    frameworks/native/include \
+    frameworks/native/libs/nativebase/include \
+    frameworks/native/libs/nativewindow/include \
+    $(LOCAL_PATH)/../stack/common \
+    frameworks/native/include/media/openmax \
+    frameworks/native/libs/arect/include \
+    $(call project-path-for,qcom-display)/libgralloc \
+    $(call project-path-for,qcom-display)/libqdutils \
+    $(call project-path-for,qcom-display)/libqservice \
+    $(call project-path-for,qcom-media)/libstagefrighthw \
+    system/media/camera/include \
+    $(LOCAL_PATH)/../../mm-image-codec/qexif \
+    $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
+    $(LOCAL_PATH)/../util \
+    $(LOCAL_PATH)/wrapper \
+    system/media/camera/include
 
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include/media
@@ -69,7 +70,7 @@ LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 ifeq ($(TARGET_TS_MAKEUP),true)
 LOCAL_SHARED_LIBRARIES += libts_face_beautify_hal libts_detected_face_hal
 endif
-LOCAL_MODULE_RELATIVE_PATH    := hw
+LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE := camera.$(TARGET_BOARD_PLATFORM)
 LOCAL_32_BIT_ONLY := true
 LOCAL_VENDOR_MODULE := true
