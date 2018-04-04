@@ -176,6 +176,9 @@ etc/firmware/a300_pm4.fw
 
 # Media
 lib/libOmxVdecHevc.so
+lib/libOmxCore.so
+lib/libOmxVdec.so
+lib/libOmxVenc.so
 vendor/lib/libHevcSwDecoder.so
 vendor/lib/libI420colorconvert.so
 vendor/lib/libmmosal.so
