@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_kernel_wingtech_msm8916",
+    "target_path": "kernel/wingtech/msm8916"
+  }
+]
