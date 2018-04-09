@@ -1,0 +1,3 @@
+# Camera
+/data/cam_socket(.*)?                                 u:object_r:camera_socket:s0
+
