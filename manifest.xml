@@ -95,7 +95,7 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
-        <transport arch="32+64">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>2.0</version>
         <interface>
             <name>IMapper</name>
@@ -165,12 +165,12 @@
     </hal>
     <hal format="hidl">
         <name>android.hardware.renderscript</name>
-        <transport arch="32+64">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>1.0</version>
     </hal>
     <hal format="hidl">
         <name>android.hardware.sensors</name>
-        <transport arch="32+64">passthrough</transport>
+        <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
             <name>ISensors</name>
