@@ -27,7 +27,8 @@ LOCAL_ADDITIONAL_DEPENDENCIES := INSTALLED_KERNEL_HEADERS
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libxml2 libutils
 
-LOCAL_MODULE := sensors.$(TARGER_DEVICE)
+LOCAL_MODULE := sensors.msm8916
+LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
 
 # Export calibration library needed dependency headers
@@ -65,26 +66,3 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)
 LOCAL_SRC_FILES := calmodule.cfg
 
 include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := sensors.$(TARGET_BOARD_PLATFORM)
-
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-
-LOCAL_CFLAGS := -DLOG_TAG=\"MultiHal\"
-
-LOCAL_SRC_FILES := \
-    multihal.cpp \
-    SensorEventQueue.cpp \
-
-LOCAL_SHARED_LIBRARIES := \
-    libcutils \
-    libdl \
-    liblog \
-    libutils \
-
-LOCAL_STRIP_MODULE := false
-
-include $(BUILD_SHARED_LIBRARY)
