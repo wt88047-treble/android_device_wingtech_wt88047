@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES += \
 
 # GNSS HAL
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl 
+    android.hardware.gnss@1.0-impl
 
 # Init scripts
 PRODUCT_PACKAGES += \
@@ -115,7 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor \
-    android.hardware.bluetooth@1.0-impl 
+    android.hardware.bluetooth@1.0-impl
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -134,6 +134,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     copybit.msm8916 \
@@ -173,7 +174,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl 
+    android.hardware.drm@1.0-impl
 
 # FM
 PRODUCT_PACKAGES += \
@@ -182,7 +183,7 @@ PRODUCT_PACKAGES += \
 
 # Keymaster HAL
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-impl 
+    android.hardware.keymaster@3.0-impl
 
 # Keystore
 ifneq ($(TARGET_PROVIDES_KEYMASTER),true)
@@ -266,7 +267,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl 
+    android.hardware.vibrator@1.0-impl
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -485,11 +486,7 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     calmodule.cfg \
     libcalmodule_common \
-    sensors.msm8916 \
-    sensors.wt88047
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/sensors/_hals.conf:system/vendor/etc/sensors/_hals.conf
+    sensors.msm8916
 
 # Permissions
 PRODUCT_COPY_FILES += \
