@@ -290,5 +290,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf \
     android.hardware.wifi@1.0-service
 
+# Shims
+PRODUCT_PACKAGES += \
+    libshims_boringssl \
+    libshims_camera \
+    libshims_ims
+
 include device/wingtech/wt88047/vendor-prop.mk
 include device/wingtech/wt88047/default-prop.mk

@@ -174,6 +174,15 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VNDK_RUNTIME_DISABLE := true
 BOARD_VNDK_VERSION := current
 
+# Shims
+TARGET_LD_SHIM_LIBS := \
+    /vendor/lib64/libflp.so|libshims_flp.so \
+    /vendor/lib64/libizat_core.so|libshims_get_process_name.so \
+    /vendor/lib64/libmmcamera2_imglib_modules.so|libshim_camera.so \
+    /vendor/lib64/lib-imsdpl.so|libshims_boringssl.so \
+    /vendor/lib64/lib-imscamera.so|libshims_camera.so \
+    /vendor/lib64/lib-imsvt.so|libshims_ims.so
+
 # Wlan
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HOSTAPD_DRIVER := NL80211
