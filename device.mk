@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(TARGET_COPY_OUT_VENDOR)/wingtech/wt88047/wt88047-vendor.mk)
-$(call inherit-product, $(TARGET_COPY_OUT_VENDOR)/wingtech/volte/volte.mk)
-$(call inherit-product, $(TARGET_COPY_OUT_VENDOR)/wingtech/volte/wt88047/wt88047-vendor.mk)
+$(call inherit-product, vendor/wingtech/wt88047/wt88047-vendor.mk)
+$(call inherit-product, vendor/wingtech/volte/volte.mk)
+$(call inherit-product, vendor/wingtech/volte/wt88047/wt88047-vendor.mk)
 
 # ANT+
 PRODUCT_PACKAGES += \
