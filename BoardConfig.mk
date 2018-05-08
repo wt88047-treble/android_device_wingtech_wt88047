@@ -16,6 +16,7 @@
 TARGET_BOARD_PLATFORM := msm8916
 FORCE_32_BIT := true
 DEVICE_PATH := device/wingtech/wt88047
+TARGET_COPY_OUT_VENDOR := vendor
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
@@ -139,7 +140,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
 #BOARD_CACHEIMAGE_PARTITION_SIZE := 335544320
 BOARD_VENDORIMAGE_PARTITION_SIZE := 335544320
-BOARD_VENDORIMAGE_PARTITION_TYPE := ext4
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_USES_VENDORIMAGE := true
 BOARD_PERSISTIMAGE_PARTITION_SIZE := 33554432
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1073741824
@@ -148,6 +150,7 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 #BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
@@ -172,19 +175,19 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += \
-    $(DEVICE_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += \
+#    $(DEVICE_PATH)/sepolicy
 
-include device/qcom/sepolicy/sepolicy.mk
-include device/qcom/sepolicy/legacy-sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/legacy-sepolicy.mk
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    /vendor/bin/mm-qcamera-daemon|libshim_camera.so \
-    /vendor/lib/libflp.so|libshims_flp.so \
-    /vendor/lib/libizat_core.so|libshims_get_process_name.so \
-    /vendor/lib/libmmcamera2_imglib_modules.so|libshim_camera.so \
-    /vendor/lib/lib-imsvt.so|libshims_ims.so
+    $(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon|libshim_camera.so \
+    $(TARGET_COPY_OUT_VENDOR)/lib/libflp.so|libshims_flp.so \
+    $(TARGET_COPY_OUT_VENDOR)/lib/libizat_core.so|libshims_get_process_name.so \
+    $(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_imglib_modules.so|libshim_camera.so \
+    $(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvt.so|libshims_ims.so
 
 # Wlan
 BOARD_HAS_QCOM_WLAN := true
