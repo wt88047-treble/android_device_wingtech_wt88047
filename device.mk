@@ -467,7 +467,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.custom_ecc=1 \
     persist.radio.ecc_hard_1=112,911,110,122,119,120,000,118 \
     persist.radio.ecc_hard_count=1 \
-    rild.libpath=$(TARGET_COPY_OUT_VENDOR)/lib/libril-qc-qmi-1.so \
+    rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
     ril.subscription.types=RUIM
 
 # Thermal
@@ -518,4 +518,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := framework-res
 
-
+# Properties for treble
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.treble.enable=true
