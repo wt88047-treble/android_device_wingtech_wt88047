@@ -1,2 +1,0 @@
-# kernel early mount may be
-allow init kernel:security { setcheckreqprot };
