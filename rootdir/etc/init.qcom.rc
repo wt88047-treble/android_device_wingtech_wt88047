@@ -33,6 +33,7 @@ import init.target.rc
 on early-init
     mkdir /firmware 0771 system system
     mkdir /system 0777 root root
+    mkdir /vendor 0777 root root
     symlink /data/tombstones /tombstones
 
     mount debugfs debugfs /sys/kernel/debug
@@ -50,6 +51,7 @@ on init
 on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
+    mount_all fstab.vendor
     mount_all fstab.qcom
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
