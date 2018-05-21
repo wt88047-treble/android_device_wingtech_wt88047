@@ -518,6 +518,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := framework-res
 
-# Properties for treble
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.treble.enable=true
+# Properties to enable adb on boot
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.sys.usb.config=adb,mtp \
+    ro.debugable=1
