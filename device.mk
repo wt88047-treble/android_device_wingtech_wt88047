@@ -523,9 +523,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.treble.enable=true
 
 # properties to enable adb on boot
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0
     ro.secure=0
-    persist.sys.usb.config=adb
+    persist.sys.usb.config=adb,mtp
     ro.debugable=1
 
