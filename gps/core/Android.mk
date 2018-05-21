@@ -6,7 +6,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE := libloc_core
 LOCAL_MODULE_OWNER := qcom
-
+LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
 
 ifeq ($(TARGET_DEVICE),apq8026_lw)
