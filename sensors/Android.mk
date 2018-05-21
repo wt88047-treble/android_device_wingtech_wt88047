@@ -30,6 +30,7 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libxml2 libutils
 LOCAL_MODULE := sensors.msm8916
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 
 # Export calibration library needed dependency headers
 LOCAL_COPY_HEADERS_TO := sensors/inc
