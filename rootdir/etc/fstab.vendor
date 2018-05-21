@@ -1,3 +1,0 @@
-# for treble
-
-/dev/block/bootdevice/by-name/vendor         /vendor      ext4    ro,barrier=1,discard                                        wait
