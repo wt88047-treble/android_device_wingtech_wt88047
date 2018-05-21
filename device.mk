@@ -355,7 +355,6 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_PACKAGES += \
-    fstab.vendor \
     fstab.qcom \
     init.target.rc
 
