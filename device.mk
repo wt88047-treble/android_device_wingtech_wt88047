@@ -524,3 +524,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=0 \
     persist.sys.usb.config=adb,mtp \
     ro.debugable=1
+
+# VNDK
+PRODUCT_PACKAGES += \
+    wt88047-vndk
