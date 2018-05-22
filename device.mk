@@ -528,3 +528,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 # VNDK
 PRODUCT_PACKAGES += \
     wt88047-vndk
+
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0
