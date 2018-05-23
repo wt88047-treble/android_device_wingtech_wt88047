@@ -154,6 +154,7 @@ BOARD_USES_VENDORIMAGE := true
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 TARGET_COPY_OUT_VENDOR := vendor
 PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_COMPATIBILITY_MATRIX_LEVEL_OVERRIDE := 27
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
@@ -177,6 +178,10 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 USE_OPENGL_RENDERER := true
 
+# HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
+DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
+
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
 #    $(DEVICE_PATH)/sepolicy
@@ -186,11 +191,11 @@ USE_OPENGL_RENDERER := true
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    $(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon|libshim_camera.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/libflp.so|libshims_flp.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/libizat_core.so|libshims_get_process_name.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_imglib_modules.so|libshim_camera.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvt.so|libshims_ims.so
+    /vendor/bin/mm-qcamera-daemon|libshim_camera.so \
+    /vendor/lib/libflp.so|libshims_flp.so \
+    /vendor/lib/libizat_core.so|libshims_get_process_name.so \
+    /vendor/lib/libmmcamera2_imglib_modules.so|libshim_camera.so \
+    /vendor/lib/lib-imsvt.so|libshims_ims.so
 
 # Wlan
 BOARD_HAS_QCOM_WLAN := true
