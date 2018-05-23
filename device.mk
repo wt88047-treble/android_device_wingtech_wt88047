@@ -545,8 +545,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
-
-# For treble try
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0 \
-    android.hardware.configstore-utils
