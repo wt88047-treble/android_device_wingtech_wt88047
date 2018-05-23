@@ -24,6 +24,7 @@ LOCAL_C_INCLUDES := gui
 LOCAL_SHARED_LIBRARIES := libgui libutils liblog libsensor libbinder libandroid
 LOCAL_MODULE := libshim_camera
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -34,6 +35,7 @@ LOCAL_SRC_FILES := \
 
 LOCAL_MODULE := libshims_flp
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -44,5 +46,6 @@ LOCAL_SRC_FILES := \
 
 LOCAL_MODULE := libshims_get_process_name
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := true
 
 include $(BUILD_SHARED_LIBRARY)

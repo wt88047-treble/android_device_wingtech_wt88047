@@ -191,11 +191,11 @@ DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
-    $(TARGET_COPY_OUT_VENDOR)/bin/mm-qcamera-daemon|libshim_camera.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/libflp.so|libshims_flp.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/libizat_core.so|libshims_get_process_name.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera2_imglib_modules.so|libshim_camera.so \
-    $(TARGET_COPY_OUT_VENDOR)/lib/lib-imsvt.so|libshims_ims.so
+    /vendor/bin/mm-qcamera-daemon|libshim_camera.so \
+    /vendor/lib/libflp.so|libshims_flp.so \
+    /vendor/lib/libizat_core.so|libshims_get_process_name.so \
+    /vendor/lib/libmmcamera2_imglib_modules.so|libshim_camera.so \
+    /vendor/lib/lib-imsvt.so|libshims_ims.so
 
 # Wlan
 BOARD_HAS_QCOM_WLAN := true
