@@ -27,7 +27,7 @@ VNDK_SP_LIBRARIES := \
     libunwind \
     libutils \
     libz \
-    libui
+    libui_graphics
 
 EXTRA_VENDOR_LIBRARIES := \
     android.hidl.base@1.0 \
