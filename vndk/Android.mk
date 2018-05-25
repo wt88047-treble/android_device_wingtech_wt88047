@@ -29,7 +29,12 @@ VNDK_SP_LIBRARIES := \
 
 EXTRA_VENDOR_LIBRARIES := \
     android.hidl.base@1.0 \
-    android.hidl.manager@1.0
+    android.hidl.manager@1.0 \
+    libhardware_legacy \
+    libbinder \
+    libui \
+    android.hardware.configstore@1.0 \
+    android.hardware.configstore-utils 
 
 #-------------------------------------------------------------------------------
 # VNDK Modules
