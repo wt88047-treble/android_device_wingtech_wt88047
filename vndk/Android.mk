@@ -16,7 +16,6 @@ VNDK_SP_LIBRARIES := \
     libcutils \
     libft2 \
     libhardware \
-    libhardware_legacy \
     libhidlbase \
     libhidlmemory \
     libhidltransport \
@@ -26,8 +25,7 @@ VNDK_SP_LIBRARIES := \
     libpng \
     libunwind \
     libutils \
-    libz \
-    libui_graphics
+    libz 
 
 EXTRA_VENDOR_LIBRARIES := \
     android.hidl.base@1.0 \
