@@ -375,6 +375,7 @@ PRODUCT_COPY_FILES += \
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
+    android.hardware.light@2.0-service \
     lights.msm8916
 
 # Media
@@ -432,6 +433,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service \
     camera.device@3.2-impl \
     camera.msm8916 \
     libmm-qcamera \
@@ -492,6 +494,7 @@ PRODUCT_COPY_FILES += \
 # Sensor HAL
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
+    android.hardware.sensors@1.0-service \
     calmodule.cfg \
     libcalmodule_common \
     sensors.msm8916
@@ -533,9 +536,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # properties to enable adb on boot
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.adb.secure=0
-    ro.secure=0
-    persist.sys.usb.config=adb,mtp
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.sys.usb.config=adb,mtp \
     ro.debugable=1
 
 # VNDK
