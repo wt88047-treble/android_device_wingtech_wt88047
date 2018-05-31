@@ -34,7 +34,8 @@ EXTRA_VENDOR_LIBRARIES := \
     libbinder \
     libui \
     android.hardware.configstore@1.0 \
-    android.hardware.configstore-utils 
+    android.hardware.configstore-utils \
+    android.hardware.camera.common@1.0 
 
 #-------------------------------------------------------------------------------
 # VNDK Modules
