@@ -301,8 +301,6 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.device@1.0.vendor \
-    android.hardware.camera.common@1.0.vendor \
     camera.device@3.2-impl \
     camera.msm8916 \
     libmm-qcamera \
@@ -347,14 +345,9 @@ PRODUCT_COPY_FILES += \
 # Sensor HAL
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0.vendor \
     calmodule.cfg \
     libcalmodule_common \
-    sensors.msm8916 \
-    sensors.wt88047
-
-PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/configs/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
+    sensors.msm8916
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -380,4 +373,6 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
+include device/wingtech/wt88047/extra-libs.mk
+include device/wingtech/wt88047/vendor-prop.mk
 include device/wingtech/wt88047/default-prop.mk
