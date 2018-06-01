@@ -4,8 +4,7 @@ media.aac_51_output_enabled=true \
 persist.debug.wfd.enable=1 \
 persist.sys.wfd.virtual=0 \
 ro.am.reschedule_service=true \
-ro.config.max_starting_bg=8 \
-persist.media.treble_omx=false
+ro.config.max_starting_bg=8
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
