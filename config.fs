@@ -4,9 +4,6 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE
 
-[AID_QCOM_DIAG]
-value:2950
-
 [AID_RFS]
 value:2951
 
