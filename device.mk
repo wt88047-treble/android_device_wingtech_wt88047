@@ -376,4 +376,5 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
 
+include device/wingtech/wt88047/vendor-prop.mk
 include device/wingtech/wt88047/default-prop.mk
