@@ -1,26 +1,23 @@
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-media.aac_51_output_enabled=true \
 persist.debug.wfd.enable=1 \
-persist.sys.wfd.virtual=0 \
-ro.am.reschedule_service=true \
 ro.config.max_starting_bg=8
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-av.streaming.offload.enable=true \
+af.fast_track_multiplier=1 \
 audio.deep_buffer.media=true \
-audio.offload.buffer.size.kb=64 \
-audio.offload.gapless.enabled=true \
 audio.offload.min.duration.secs=30 \
-audio.offload.pcm.16bit.enable=false \
-audio.offload.pcm.24bit.enable=true \
 audio.offload.video=true \
-use.voice.path.for.pcm.voip=true \
-ro.qc.sdk.audio.fluencetype=fluence \
-persist.audio.fluence.voicecall=true \
-persist.audio.fluence.voicerec=false \
-persist.audio.fluence.speaker=false
+ro.vendor.audio.sdk.fluencetype=fluence \
+persist.vendor.audio.fluence.voicecall=true \
+persist.vendor.audio.fluence.voicerec=false \
+persist.vendor.audio.fluence.speaker=false \
+vendor.audio_hal.period_size=192 \
+vendor.audio.av.streaming.offload.enable=true \
+vendor.audio.offload.buffer.size.kb=64 \
+vendor.audio.offload.gapless.enabled=true \
+vendor.voice.path.for.pcm.voip=true
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -79,8 +76,8 @@ ro.min_freq_0=800000
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.data.qmi.adb_logmask=0 \
 persist.radio.apm_sim_not_pwdn=1 \
+persist.vendor.radio.apm_sim_not_pwdn=1 \
 ro.telephony.call_ring.multiple=false \
-ro.use_data_netmgrd=true \
 persist.data.target=dpm1 \
 persist.radio.multisim.config=dsds \
 persist.radio.custom_ecc=1 \
@@ -91,7 +88,6 @@ ril.subscription.types=RUIM
 
 # WIFI
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.disableWifiApFirmwareReload=true \
 wifi.interface=wlan0
 
 # FRP
@@ -100,7 +96,6 @@ ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # SYS
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.sys.fw.dex2oat_thread_count=2 \
 ro.sys.fw.use_trim_settings=true \
 ro.sys.fw.empty_app_percent=50 \
 ro.sys.fw.trim_empty_percent=100 \
