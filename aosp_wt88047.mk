@@ -15,8 +15,11 @@
 
 $(call inherit-product, device/wingtech/wt88047/full_wt88047.mk)
 
-# Inherit some common AOKP stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSP stuff.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/common.mk)
 
 # Inherit common treble configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
@@ -27,7 +30,7 @@ TARGET_BOARD_PLATFORM_VARIANT := msm8916
 # Assert
 TARGET_OTA_ASSERT_DEVICE := HM2014811,HM2014812,HM2014813,HM2014814,HM2014815,HM2014816,HM2014817,HM2014818,HM2014819,HM2014820,HM2014821,HM2014112,wt88047,wt86047
 
-PRODUCT_NAME := lineage_wt88047
+PRODUCT_NAME := aosp_wt88047
 BOARD_VENDOR := wingtech
 PRODUCT_DEVICE := wt88047
 
