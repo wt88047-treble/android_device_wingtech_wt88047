@@ -22,7 +22,7 @@ $(call inherit-product, device/wingtech/wt88047/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := wt88047
-PRODUCT_NAME := full_wt88047
+PRODUCT_NAME := aosp_wt88047
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 2
 PRODUCT_MANUFACTURER := Wingtech

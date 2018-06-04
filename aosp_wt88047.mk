@@ -18,8 +18,6 @@ $(call inherit-product, device/wingtech/wt88047/full_wt88047.mk)
 # Inherit some common AOSP stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit some common aosp stuff.
-$(call inherit-product, vendor/aosp/common.mk)
 
 # Inherit common treble configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
