@@ -33,6 +33,7 @@
 #include <stdlib.h>
 #include <utils/Errors.h>
 #include <hardware/camera.h>
+#include <unistd.h>
 
 #include "QCamera2Factory.h"
 
