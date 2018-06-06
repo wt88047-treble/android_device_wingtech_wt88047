@@ -9,3 +9,4 @@ allow init vendor_file:file { execute_no_trans };
 allow hal_camera_default device:chr_file { read write };
 allow hal_camera_default device:chr_file { open };
 allow hal_camera_default device:chr_file { ioctl };
+allow init hal_camera_default:fd { use };
