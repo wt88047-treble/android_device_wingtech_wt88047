@@ -6,3 +6,6 @@ allow hal_camera_default socket_device:unix_stream_socket { write };
 allow hal_camera_default init:unix_stream_socket { connectto};
 allow init video_device:chr_file { write };
 allow init vendor_file:file { execute_no_trans };
+allow hal_camera_default device:chr_file { read write };
+allow hal_camera_default device:chr_file { open };
+allow hal_camera_default device:chr_file { ioctl };
