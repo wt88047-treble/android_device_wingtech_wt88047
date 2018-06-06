@@ -1,0 +1,2 @@
+allow hal_camera_default vndservicemanager:binder { call };
+allow hal_camera_default vndbinder_device:chr_file { ioctl };
