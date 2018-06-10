@@ -14,14 +14,14 @@
 # limitations under the License.
 
 TARGET_BOARD_PLATFORM := msm8916
-FORCE_32_BIT := true
+
 DEVICE_PATH := device/wingtech/wt88047
 
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 # Architecture
-ifneq ($(FORCE_32_BIT),true)
+
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
@@ -33,13 +33,6 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_USES_64_BIT_BINDER := true
-else
-TARGET_ARCH := arm
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_VARIANT := cortex-a53
-endif
 
 # Audio
 AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
@@ -107,15 +100,18 @@ TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(DEVICE_PATH)/init/init_wt88047.cpp
 
 # Kernel
 BOARD_DTBTOOL_ARGS := -2
-BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_KERNEL_SOURCE := kernel/wingtech/msm8916
-TARGET_KERNEL_CONFIG := lineageos_wt88047_defconfig
+TARGET_KERNEL_CONFIG := wt88047-perf_defconfig
 BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 phy-msm-usb.floated_charger_enable=1 console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # Lights
 BOARD_LIGHTS_VARIANT := aw2013
@@ -179,8 +175,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 BOARD_SEPOLICY_DIRS += \
     $(DEVICE_PATH)/sepolicy
 
-#include device/qcom/sepolicy/sepolicy.mk
-#include device/qcom/sepolicy/legacy-sepolicy.mk
+include device/qcom/sepolicy/sepolicy.mk
+include device/qcom/sepolicy/legacy-sepolicy.mk
 
 # Wlan
 BOARD_HAS_QCOM_WLAN := true
@@ -196,5 +192,5 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # inherit from the proprietary version
-include vendor/wingtech/wt88047/BoardConfigVendor.mk
+include vendor/xiaomi/wt88047/BoardConfigVendor.mk
 include device/wingtech/wt88047/radio.mk

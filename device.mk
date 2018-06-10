@@ -14,9 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/wingtech/wt88047/wt88047-vendor.mk)
-$(call inherit-product, vendor/wingtech/volte/volte.mk)
-$(call inherit-product, vendor/wingtech/volte/wt88047/wt88047-vendor.mk)
+$(call inherit-product, vendor/xiaomi/wt88047/wt88047-vendor.mk)
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -367,6 +365,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 include device/wingtech/wt88047/extra-libs.mk
 include device/wingtech/wt88047/vendor-prop.mk
