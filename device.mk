@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, vendor/wingtech/wt88047/wt88047-vendor.mk)
+$(call inherit-product, vendor/xiaomi/wt88047/wt88047-vendor.mk)
 
 # ANT+
 PRODUCT_PACKAGES += \
@@ -327,7 +327,6 @@ PRODUCT_COPY_FILES += \
 # Sensor HAL
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    android.hardware.sensors@1.0-service \
     calmodule.cfg \
     libcalmodule_common \
     sensors.msm8916 \
@@ -357,6 +356,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0
+
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
 
 include device/wingtech/wt88047/extra-libs.mk
 include device/wingtech/wt88047/vendor-prop.mk
