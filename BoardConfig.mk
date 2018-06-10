@@ -99,9 +99,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8916
 TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(DEVICE_PATH)/init/init_wt88047.cpp
 
 # Kernel
-BOARD_DTBTOOL_ARGS := -2
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-BOARD_KERNEL_SEPARATED_DT := true
 TARGET_KERNEL_SOURCE := kernel/wingtech/msm8916
 TARGET_KERNEL_CONFIG := wt88047-perf_defconfig
 BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 phy-msm-usb.floated_charger_enable=1 console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
@@ -112,10 +110,6 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-
-# Lights
-BOARD_LIGHTS_VARIANT := aw2013
-TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage HW
 BOARD_HARDWARE_CLASS += hardware/lineage/lineagehw
