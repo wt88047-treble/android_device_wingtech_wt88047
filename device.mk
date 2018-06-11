@@ -368,10 +368,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
-# MSM IRQ Balancer configuration file
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
-
 include device/wingtech/wt88047/extra-libs.mk
 include device/wingtech/wt88047/vendor-prop.mk
 include device/wingtech/wt88047/default-prop.mk
