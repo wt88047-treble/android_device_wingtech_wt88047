@@ -152,6 +152,7 @@ PRODUCT_PACKAGES += \
 # Init scripts
 PRODUCT_PACKAGES += \
     init.qcom.rc \
+    init.qcom.bt.sh \
     init.qcom.mem.sh \
     init.acdb.sh \
     init.qcom.power.rc \
