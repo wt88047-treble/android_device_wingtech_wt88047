@@ -28,8 +28,6 @@
 import init.qcom.ims.rc
 
 on boot
-    # Shim
-    export LD_PRELOAD "/vendor/lib/libshims_flp.so:/vendor/lib/libshims_get_process_name.so:/vendor/lib/libshim_camera.so"
     # Torch
     chown system camera /sys/class/leds/torch-light/brightness
     chmod 0660 /sys/class/leds/torch-light/brightness
