@@ -14,4 +14,5 @@ PRODUCT_PACKAGES += \
    libbinder.vendor \
    libui.vendor \
    android.hardware.configstore@1.0.vendor \
-   android.hardware.configstore-utils.vendor 
+   android.hardware.configstore-utils.vendor \
+   libstagefright_foundation.vendor

@@ -38,7 +38,8 @@ EXTRA_VENDOR_LIBRARIES := \
     android.hardware.camera.common@1.0 \
     android.hardware.sensors@1.0 \
     android.hardware.camera.device@1.0 \
-    libsensor_vendor
+    libsensor_vendor \
+    libstagefright_foundation
 
 #-------------------------------------------------------------------------------
 # VNDK Modules
