@@ -17,7 +17,7 @@
 #define LOG_TAG "sensor"
 #include <utils/Log.h>
 
-#include <android/looper.h>
+#include "looper.h"
 #include <android/sensor.h>
 
 #include <utils/RefBase.h>
