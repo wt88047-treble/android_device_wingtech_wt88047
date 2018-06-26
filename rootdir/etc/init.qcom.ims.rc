@@ -15,17 +15,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-on boot
-service ims_rtp_daemon /vendor/bin/ims_rtp_daemon
-   class main
-   user system
-   socket ims_rtpd stream 0660 system radio
-   group radio net_raw oem_2950 inet log
-   disabled
-
-on property:sys.ims.DATA_DAEMON_STATUS=1
-    start ims_rtp_daemon
-
 service imscmservice /vendor/bin/imscmservice
     class main
     user system
@@ -50,9 +39,3 @@ service imsqmidaemon /vendor/bin/imsqmidaemon
     user system
     socket ims_qmid stream 0660 system radio
     group radio net_raw log oem_2950
-
-service qti_ims /vendor/bin/init.qti.ims.sh
-    class core
-    user radio
-    group radio
-    oneshot
