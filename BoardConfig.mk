@@ -175,12 +175,6 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 #include device/qcom/sepolicy/sepolicy.mk
 #include device/qcom/sepolicy/legacy-sepolicy.mk
 
-# Shims
-TARGET_LD_SHIM_LIBS := \
-    /vendor/lib/libflp.so|libshims_flp.so \
-    /vendor/lib/libizat_core.so|libshims_get_process_name.so \
-    /vendor/lib/libmmcamera2_imglib_modules.so|libshim_camera.so
-
 # Wlan
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HOSTAPD_DRIVER := NL80211
