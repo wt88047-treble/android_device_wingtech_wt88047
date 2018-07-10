@@ -25,7 +25,7 @@ LOCAL_C_INCLUDES := \
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libxml2 libutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libxml2 libutils libhardware
 
 LOCAL_MODULE := sensors.$(TARGET_DEVICE)
 LOCAL_MODULE_TAGS := optional
@@ -50,7 +50,7 @@ LOCAL_SRC_FILES := \
     algo/common/compass/AKFS_Direction.c \
     algo/common/compass/AKFS_VNorm.c
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
@@ -85,6 +85,7 @@ LOCAL_SHARED_LIBRARIES := \
     libdl \
     liblog \
     libutils \
+    libhardware
 
 LOCAL_STRIP_MODULE := false
 

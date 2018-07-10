@@ -9,7 +9,8 @@ cc_library_static {
         "liblog",
         "libcutils",
         "libutils",
-        "libdl"
+        "libdl",
+	"libhardware"
     ],
     export_include_dirs: ["."],
 }
