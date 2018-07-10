@@ -170,6 +170,9 @@ USE_OPENGL_RENDERER := true
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 
+# VNDK
+BOARD_VNDK_VERSION := current
+
 # SELinux
 #BOARD_SEPOLICY_DIRS += \
 #    $(DEVICE_PATH)/sepolicy
