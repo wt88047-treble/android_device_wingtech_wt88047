@@ -20,7 +20,8 @@ LOCAL_SHARED_LIBRARIES := \
     libutils \
     libcutils \
     libgps.utils \
-    libdl
+    libdl \
+    libhardware
 
 LOCAL_SRC_FILES += \
     LocApiBase.cpp \
