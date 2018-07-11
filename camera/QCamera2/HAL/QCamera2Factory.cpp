@@ -143,7 +143,6 @@ int QCamera2Factory::getCameraInfo(int camera_id, struct camera_info *info)
 
 bool QCamera2Factory::can_talk_to_sensormanager()
 {
-	sleep(5); // Wait for some time
 	return true; // Force return true
 }
 
