@@ -192,5 +192,8 @@ WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# Sensors
+TARGET_USE_CAF_SENSORS	:= true
+
 # inherit from the proprietary version
 include vendor/wingtech/wt88047/BoardConfigVendor.mk
