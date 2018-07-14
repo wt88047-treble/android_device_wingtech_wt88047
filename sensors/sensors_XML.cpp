@@ -262,10 +262,10 @@ int sensors_XML :: write_sensors_params(struct sensor_t *sensor, struct cal_resu
         return -1;
     }
     if (fnum == 0) {
-        if (getuid() != getpwnam("root")->pw_uid) {
+        if (getuid() != AID_ROOT) {
             goto exit;
         }
-        err = chown(filepath[fnum], getpwnam("root")->pw_uid, getgrnam("system")->gr_gid);
+        err = chown(filepath[fnum], AID_ROOT, AID_SYSTEM);
         if (err != 0) {
             ALOGE("chown %s failed %s", filepath[fnum], strerror(errno));
             xmlFreeDoc(mdoc);
