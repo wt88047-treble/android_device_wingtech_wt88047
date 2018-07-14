@@ -57,7 +57,7 @@ LOCAL_SRC_FILES := \
 		   algo/common/compass/AKFS_Direction.c \
 		   algo/common/compass/AKFS_VNorm.c
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib
 include $(BUILD_SHARED_LIBRARY)
