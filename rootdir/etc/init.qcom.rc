@@ -52,6 +52,7 @@ on fs
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
     mount_all fstab.qcom
+    start acdblink
     mkdir /persist/data 0700 system system
     restorecon_recursive /persist
 
@@ -429,5 +430,9 @@ service wcnss-service /vendor/bin/wcnss_service
     oneshot
 
 service qcom-mem /vendor/bin/init.qcom.mem.sh
+    disabled
+    oneshot
+
+service acdblink /vendor/bin/init.acdb.sh
     disabled
     oneshot
