@@ -1,5 +1,4 @@
 LOCAL_PATH := $(call my-dir)
-ifneq ($(TARGET_USE_CAF_SENSORS),true)
 include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := \
@@ -67,7 +66,6 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)
 LOCAL_SRC_FILES := calmodule.cfg
 
 include $(BUILD_PREBUILT)
-endif # TARGET_USE_CAF_SENSORS
 
 include $(CLEAR_VARS)
 

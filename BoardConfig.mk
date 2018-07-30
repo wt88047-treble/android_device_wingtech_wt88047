@@ -187,7 +187,6 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Sensors
-TARGET_USE_CAF_SENSORS	:= true
 USE_SENSOR_MULTI_HAL := true
 
 # inherit from the proprietary version
