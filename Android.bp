@@ -1,5 +1,5 @@
 subdirs = [
         "libs",
-        "camera_service/provider",
+        "camera",
         "sensors",
 ]
