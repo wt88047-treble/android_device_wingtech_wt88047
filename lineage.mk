@@ -18,9 +18,6 @@ $(call inherit-product, device/wingtech/wt88047/full_wt88047.mk)
 # Inherit some common AOKP stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit common treble configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/treble_common.mk)
-
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
@@ -30,6 +27,7 @@ TARGET_OTA_ASSERT_DEVICE := HM2014811,HM2014812,HM2014813,HM2014814,HM2014815,HM
 PRODUCT_NAME := lineage_wt88047
 BOARD_VENDOR := wingtech
 PRODUCT_DEVICE := wt88047
+TARGET_VENDOR_PRODUCT_NAME := wt88047
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
