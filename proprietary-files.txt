@@ -27,7 +27,7 @@ vendor/lib/libmmcamera2_c2d_module.so
 vendor/lib/libmmcamera2_cpp_module.so
 vendor/lib/libmmcamera2_frame_algorithm.so
 vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so|791bc521f873441b31f97582ddfff656fd08d915
 vendor/lib/libmmcamera2_isp_modules.so
 vendor/lib/libmmcamera2_is.so
 vendor/lib/libmmcamera2_pproc_modules.so
@@ -139,7 +139,7 @@ vendor/lib/libssd.so|24fe8f821a5798cdbbf8bbdb0bd7b39c8515546d
 vendor/lib/hw/flp.default.so|c281157957565dc35f7e1731b2c71a71a532a821
 vendor/lib/libflp.so|776aae670ffc63b1fbe27420729ee7bd9a6fbb0e
 vendor/lib/libgeofence.so|bd34516de3c933d81267822716235c358ab6695d
-vendor/lib/libizat_core.so|8a948e4f2aa38463050c6399f04ecb38564689d6
+vendor/lib/libizat_core.so|65e5958016cdd15f87b9ec8b37c6bcef68c3c983
 vendor/lib/liblbs_core.so|10caf0d54768114cd471c33a1e2dc6385d3c7707
 
 # Graphics - from crackling
