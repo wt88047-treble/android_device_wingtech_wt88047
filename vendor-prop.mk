@@ -93,6 +93,10 @@ dalvik.vm.dex2oat-flags=--no-watch-dog \
 dalvik.vm.dex2oat-swap=false \
 sys.use_fifo_ui=1
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.lineage.build.vendor_security_patch=2017-01-01
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.camera.cpp.duplication=false \
