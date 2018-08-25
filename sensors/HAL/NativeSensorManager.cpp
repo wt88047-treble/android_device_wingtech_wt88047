@@ -793,7 +793,7 @@ int NativeSensorManager::getEventPath(const char *sysfs_path, char *event_path)
 
 	dir = opendir(sysfs_path);
 	if (dir == NULL) {
-		ALOGE("open %s failed.(%s)\n", strerror(errno));
+		ALOGE("open %s failed.(%s)\n", sysfs_path, strerror(errno));
 		return -1;
 	}
 
@@ -1021,7 +1021,7 @@ int NativeSensorManager::syncDelay(int handle)
 			min_ns = ctx->delay_ns;
 	}
 
-	ALOGD("%s calling driver setDelay %d ms\n", list->sensor->name, min_ns / 1000000);
+	ALOGD("%s calling driver setDelay %lld ms\n", list->sensor->name, min_ns / 1000000);
 	return list->driver->setDelay(list->sensor->handle, min_ns);
 }
 
@@ -1055,7 +1055,7 @@ int NativeSensorManager::syncLatency(int handle)
 	}
 
 	if (list->sensor->fifoMaxEventCount) {
-		ALOGD("%s calling driver setLatency %d ms\n", list->sensor->name, min_ns / 1000000);
+		ALOGD("%s calling driver setLatency %lld ms\n", list->sensor->name, min_ns / 1000000);
 		list->driver->setLatency(list->sensor->handle, min_ns);
 	}
 
