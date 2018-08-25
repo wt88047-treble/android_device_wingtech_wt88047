@@ -8,13 +8,14 @@ EXTRA_VENDOR_LIBRARIES := \
     libui \
     android.hardware.configstore@1.0 \
     android.hardware.configstore-utils \
-    android.hardware.camera.common@1.0 \
-    android.hardware.sensors@1.0 \
-    android.hardware.camera.device@1.0 \
     libsensor_vendor \
     libstagefright_foundation \
     libstdc++ \
-    libnativehelper
+    libnativehelper \
+    libgui \
+    android.hidl.token@1.0-utils \
+    android.hardware.graphics.bufferqueue@1.0
+
 
 #-------------------------------------------------------------------------------
 # VNDK Modules
