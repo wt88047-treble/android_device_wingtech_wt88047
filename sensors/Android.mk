@@ -1,43 +1,4 @@
 LOCAL_PATH := $(call my-dir)
-include $(CLEAR_VARS)
-
-LOCAL_SRC_FILES := \
-    sensors.cpp \
-    SensorBase.cpp \
-    LightSensor.cpp \
-    ProximitySensor.cpp \
-    CompassSensor.cpp \
-    Accelerometer.cpp \
-    Gyroscope.cpp \
-    InputEventReader.cpp \
-    CalibrationManager.cpp \
-    NativeSensorManager.cpp \
-    VirtualSensor.cpp \
-    sensors_XML.cpp
-
-LOCAL_CFLAGS += -DLOG_TAG=\"Sensors\"
-
-LOCAL_C_INCLUDES := \
-    external/libxml2/include \
-    external/icu/icu4c/source/common
-
-LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
-LOCAL_ADDITIONAL_DEPENDENCIES := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
-
-LOCAL_SHARED_LIBRARIES := liblog libcutils libdl libxml2 libutils libhardware
-
-LOCAL_MODULE := sensors.$(TARGET_DEVICE)
-LOCAL_MODULE_TAGS := optional
-LOCAL_VENDOR_MODULE := true
-
-# Export calibration library needed dependency headers
-LOCAL_COPY_HEADERS_TO := sensors/inc
-LOCAL_COPY_HEADERS := \
-    CalibrationModule.h \
-    sensors_extension.h \
-    sensors.h
-
-include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
@@ -53,61 +14,11 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware libutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_SHARED_LIBRARIES)
+LOCAL_HEADER_LIBRARIES := sensors.$(TARGET_DEVICE)_headers
 
 include $(BUILD_SHARED_LIBRARY)
 
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := calmodule.cfg
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR_ETC)
-LOCAL_SRC_FILES := calmodule.cfg
-
-include $(BUILD_PREBUILT)
-
-include $(CLEAR_VARS)
-
-LOCAL_MODULE := sensors.$(TARGET_BOARD_PLATFORM)
-
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-
-LOCAL_CFLAGS := -DLOG_TAG=\"MultiHal\"
-
-LOCAL_SRC_FILES := \
-    multihal.cpp \
-    SensorEventQueue.cpp \
-
-LOCAL_SHARED_LIBRARIES := \
-    libcutils \
-    libdl \
-    liblog \
-    libutils \
-    libhardware
-
-LOCAL_STRIP_MODULE := false
-
-include $(BUILD_SHARED_LIBRARY)
-
-include $(CLEAR_VARS)
-LOCAL_MODULE_RELATIVE_PATH := hw
-LOCAL_PROPRIETARY_MODULE := true
-LOCAL_MODULE := android.hardware.sensors@1.0-service.wt88047
-LOCAL_INIT_RC := android.hardware.sensors@1.0-service.wt88047.rc
-LOCAL_SRC_FILES := \
-        service.cpp
-
-LOCAL_SHARED_LIBRARIES := \
-        liblog \
-        libcutils \
-        libdl \
-        libbase \
-        libutils
-
-LOCAL_SHARED_LIBRARIES += \
-        libhidlbase \
-        libhidltransport \
-        android.hardware.sensors@1.0
-
-include $(BUILD_EXECUTABLE)
+include $(LOCAL_PATH)/HAL/Android.mk
+include $(LOCAL_PATH)/config/Android.mk
+include $(LOCAL_PATH)/multihal/Android.mk
+include $(LOCAL_PATH)/service/Android.mk
