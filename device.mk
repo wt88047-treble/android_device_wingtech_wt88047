@@ -154,7 +154,6 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.bt.sh \
     init.qcom.mem.sh \
-    init.acdb.sh \
     init.qcom.power.rc \
     init.qcom.ssr.rc \
     init.qcom.ims.rc \
