@@ -293,7 +293,6 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libshims_boringssl \
-    libshims_camera \
     libshims_ims
 
 include device/wingtech/wt88047/vendor-prop.mk
