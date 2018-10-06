@@ -76,7 +76,7 @@ persist.radio.ecc_hard_1=112,911,110,122,119,120,000,118 \
 persist.radio.multisim.config=dsds \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
 ril.subscription.types=RUIM \
-rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
+rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
 ro.telephony.call_ring.multiple=false
 
 # Sensors
