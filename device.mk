@@ -142,9 +142,9 @@ PRODUCT_PACKAGES += \
     fs_config_files
 
 # FM
-PRODUCT_PACKAGES += \
-    FMRadio \
-    libfmjni
+#PRODUCT_PACKAGES += \
+#    FMRadio \
+#    libfmjni
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
