@@ -295,5 +295,9 @@ PRODUCT_PACKAGES += \
     libshims_boringssl \
     libshims_ims
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 include device/wingtech/wt88047/vendor-prop.mk
 include device/wingtech/wt88047/default-prop.mk
