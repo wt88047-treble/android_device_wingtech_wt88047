@@ -258,8 +258,10 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service.wt88047 \
     calmodule.cfg \
+    sensors.msm8916
+
+#PRODUCT_PACKAGES += \
     libcalmodule_common \
-    sensors.msm8916 \
     sensors.wt88047
 
 # Shims
