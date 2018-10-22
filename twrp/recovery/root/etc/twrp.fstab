@@ -1,0 +1,26 @@
+# twrp fstab
+
+/splash          emmc      /dev/block/bootdevice/by-name/splash      flags=backup=1;display="Boot Logo"
+
+/modem_st1       emmc      /dev/block/bootdevice/by-name/modemst1    flags=backup=1;display=EFS
+/modem_st2       emmc      /dev/block/bootdevice/by-name/modemst2    flags=backup=1;subpartitionof=/modem_st1
+
+/vendor          ext4      /dev/block/bootdevice/by-name/cache       flags=backup=1;wipeingui
+/vendor_image    emmc      /dev/block/bootdevice/by-name/cache
+
+/system          ext4      /dev/block/bootdevice/by-name/system
+/system_image    emmc      /dev/block/bootdevice/by-name/system
+
+/data            ext4      /dev/block/bootdevice/by-name/userdata    flags=encryptable=footer;length=-16384;fsflags="noatime,nosuid,nodev,barrier=1,noauto_da_alloc"
+/cache           ext4      /dev/block/bootdevice/by-name/oem         flags=fsflags="noatime,nosuid,nodev,barrier=1,noauto_da_alloc"
+/persist         ext4      /dev/block/bootdevice/by-name/persist     flags=backup=1;display="Persist";fsflags="noatime,nosuid,nodev,barrier=1,noauto_da_alloc"
+
+/boot            emmc      /dev/block/bootdevice/by-name/boot
+/recovery        emmc      /dev/block/bootdevice/by-name/recovery    flags=backup=1
+/misc            emmc      /dev/block/bootdevice/by-name/misc
+
+/firmware        vfat      /dev/block/bootdevice/by-name/modem       flags=mounttodecrypt;fsflags=ro;display="Firmware"
+
+/external_sd     vfat      /dev/block/mmcblk1p1 /dev/block/mmcblk1   flags=removable;storage;wipeingui;display="Micro SDCard"
+/usb_otg         auto      /dev/block/sda1 /dev/block/sda            flags=removable;storage;wipeingui;display="USB OTG"
+
